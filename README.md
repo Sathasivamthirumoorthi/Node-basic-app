@@ -70,7 +70,27 @@ Open `package.json` and update the scripts section:
 
 ### Step 5: Create index.js
 
-Create a file named `index.js` (see code below).
+Create a file named `index.js` with this code:
+
+```javascript
+const express = require("express");
+const app = express();
+
+const PORT = 3000;
+
+// Middleware
+app.use(express.json());
+
+// Route
+app.get("/", (req, res) => {
+  res.send("Hello from Node.js + Express 🚀");
+});
+
+// Start server
+app.listen(PORT, () => {
+  console.log(`Server running on http://localhost:${PORT}`);
+});
+```
 
 ### Step 6: Start the Server
 
