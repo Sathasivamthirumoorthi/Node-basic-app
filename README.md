@@ -25,21 +25,60 @@ Download Node.js from: https://nodejs.org/en/download
 
 ---
 
-## 🚀 Quick Setup (3 Steps)
+## 🚀 Project Setup From Scratch
 
-### Step 1: Install Dependencies
+### Step 1: Initialize Node.js Project
+
+Create a new project with npm:
 
 ```bash
-npm install
+npm init -y
 ```
 
-### Step 2: Start the Server
+This creates a `package.json` file with default settings.
+
+### Step 2: Install Express
+
+Install the Express framework:
+
+```bash
+npm install express
+```
+
+This downloads and installs Express in your project.
+
+### Step 3: Install Nodemon (Development Tool)
+
+Install Nodemon for auto-restart during development:
+
+```bash
+npm install --save-dev nodemon
+```
+
+This automatically restarts your server when you change code.
+
+### Step 4: Update package.json Scripts
+
+Open `package.json` and update the scripts section:
+
+```json
+"scripts": {
+  "start": "node index.js",
+  "dev": "nodemon index.js"
+}
+```
+
+### Step 5: Create index.js
+
+Create a file named `index.js` (see code below).
+
+### Step 6: Start the Server
 
 ```bash
 npm run dev
 ```
 
-### Step 3: Open Your Browser
+### Step 7: Open Your Browser
 
 Go to: `http://localhost:3000`
 
